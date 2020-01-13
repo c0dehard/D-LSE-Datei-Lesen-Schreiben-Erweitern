@@ -13,7 +13,7 @@ def append():
     f.write(str(input("Erweiterungsmodus [ "+datei+" ]\n")))
 
 while programRuns:
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     datei = str(input("Pfad oder Dateiname\n~> "))
     modus = str(input("'r' read | 'w' write | 'a' append\n"))
     f = open (datei,modus)
@@ -31,9 +31,4 @@ while programRuns:
     elif weiter =='j':
         f.close()
     else print('Ungültige eingabe')
-os.system('cls')#bei macos/unix/linux auf 'clear' ändern
-
-
-
-
-
+os.system('cls' if os.name == 'nt' else 'clear')
