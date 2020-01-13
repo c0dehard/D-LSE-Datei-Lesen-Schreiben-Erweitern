@@ -30,5 +30,4 @@ while programRuns:
         programRuns = False
     elif weiter =='j':
         f.close()
-    else print('Ungültige eingabe')
 os.system('cls' if os.name == 'nt' else 'clear')
